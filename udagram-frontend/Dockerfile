@@ -6,11 +6,11 @@ WORKDIR /usr/src/app
 ## A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
 RUN set NODE_OPTIONS=--openssl-legacy-provider
+RUN npm cache clean --force
 RUN npm i -f --legacy-peer-deps
 RUN npm ci -f --legacy-peer-deps
 ## Bundle app source
 COPY . .
-RUN npm audit fix --force
 RUN ionic build
 ### Run 
 FROM nginx:alpine
