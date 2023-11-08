@@ -181,13 +181,6 @@
   },
   "cli": {
     "defaultCollection": "@ionic/angular-toolkit"
-  },
-  "schematics": {
-    "@ionic/angular-toolkit:component": {
-      "style": "scss"
-    },
-    "@ionic/angular-toolkit:page": {
-      "style": "scss"
-    }
   }
+  
 }
