@@ -2,15 +2,15 @@
 FROM beevelop/ionic:latest AS ionic
 ## Create app directory
 WORKDIR /usr/src/app
+ENV NODE_TLS_REJECT_UNAUTHORIZED=0
+ENV NODE_OPTIONS=--openssl-legacy-provider
 ## Install app dependencies
 ## A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
-RUN set NODE_OPTIONS=--openssl-legacy-provider
-RUN npm i -f --legacy-peer-deps
-RUN npm ci -f --legacy-peer-deps
+RUN npm i -f
 ## Bundle app source
 COPY . .
-RUN ionic build
+RUN ionic build 
 ### Run 
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html
