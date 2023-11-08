@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -31,7 +31,6 @@ import { ApiService } from './api/api.service';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent],
-  schemas: [ NO_ERRORS_SCHEMA ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

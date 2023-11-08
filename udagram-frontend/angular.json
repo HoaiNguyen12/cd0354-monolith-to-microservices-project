@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
   "version": 1,
+  "defaultProject": "app",
   "newProjectRoot": "projects",
   "projects": {
     "app": {
@@ -38,7 +39,8 @@
                 "input": "src/global.scss"
               }
             ],
-            "scripts": []
+            "scripts": [],
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
