@@ -10,7 +10,7 @@ RUN npm i -f --legacy-peer-deps
 RUN npm ci -f --legacy-peer-deps
 ## Bundle app source
 COPY . .
-RUN ionic build
+RUN ionic build --verbose
 ### Run 
 FROM nginx:alpine
 #COPY www /usr/share/nginx/html
