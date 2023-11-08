@@ -10,6 +10,7 @@ RUN npm i -f --legacy-peer-deps
 RUN npm ci -f --legacy-peer-deps
 ## Bundle app source
 COPY . .
+RUN npm audit fix --force
 RUN ionic build
 ### Run 
 FROM nginx:alpine
