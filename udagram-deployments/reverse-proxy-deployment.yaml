@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: hoaint23/reverseproxy:latest
+        image: hoaint23/udagram-reverseproxy:latest
         ports:
         - containerPort: 8080

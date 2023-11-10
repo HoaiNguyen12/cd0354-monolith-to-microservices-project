@@ -25,5 +25,5 @@ spec:
             name: udagram-configmap
         - secretRef:
             name: udagram-secret
-         - secretRef:
+        - secretRef:
             name: aws-secret
