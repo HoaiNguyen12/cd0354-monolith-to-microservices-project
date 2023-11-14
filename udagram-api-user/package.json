@@ -29,7 +29,7 @@
     "pg": "^8.0.3",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^5.21.4",
-    "sequelize-typescript": "^2.0.0-beta.1",
+    "sequelize-typescript": "^1.0.0-alpha.9",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
